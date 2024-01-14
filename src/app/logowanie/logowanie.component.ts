@@ -1,6 +1,7 @@
 
 import { Component ,  OnInit } from '@angular/core';
-
+import { AuthService } from 'src/app/logowania/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-logowanie',
   templateUrl: './logowanie.component.html',
@@ -20,6 +21,11 @@ ngOnInit(): void {
     } else {
       console.log('Błąd logowania');
     }
+  }
+  login() {
+    this.AuthService.login();
+    this.router.navigate(['/dashboard']);
+
   }
 }
 

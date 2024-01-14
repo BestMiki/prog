@@ -1,1 +1,17 @@
 <p>menu works!</p>
+<!-- menu.component.html -->
+
+<nav *ngIf="isLoggedIn">
+    <ul>
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <li><a routerLink="/profile">Profil</a></li>
+      <li><a routerLink="/settings">Ustawienia</a></li>
+      <li><a routerLink="/messages">Wiadomości</a></li>
+      <li><a routerLink="/notifications">Powiadomienia</a></li>
+      <li><a routerLink="/friends">Znajomi</a></li>
+      <li><a routerLink="/gallery">Galeria</a></li>
+      <li><a routerLink="/documents">Dokumenty</a></li>
+      
+    </ul>
+  </nav>
+  

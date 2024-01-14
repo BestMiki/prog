@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogowanieComponent } from './logowanie/logowanie.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [];
 
@@ -8,3 +10,7 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+const routes: Routes = [
+  {path: '', component: LogowanieComponent},
+  {path:'dashboard', component: DashboardComponent}
+];

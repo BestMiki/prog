@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+
+
+<app-menu></app-menu>
+
+<div class="dashboard-content">
+  <h1>{{ pageTitle }}</h1>
+
+  <p *ngIf="isLoggedIn; else notLoggedInMessage">Witaj, zalogowany użytkowniku!</p>
+  <ng-template #notLoggedInMessage>
+    <p>Zaloguj się, aby uzyskać dostęp do treści dashboardu.</p>
+  </ng-template>
+
+  <p>Rola użytkownika: {{ userRole }}</p>
+
+
+  <button (click)="handleButtonClick()">Kliknij mnie</button>
+</div>
